@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider |JQuery
+    </title>
+</head>
+<style>
+    .slider {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight:600 ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+  position: absolute;
+  font-size: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+h3{ 
+    font-size: 25px;
+}
+
+</style>
+<body>
+    <h3>
+        
+Q-3.How to create slider with animation?
+    </h3>
+    <div class="slider">
+        <div class="slides">
+          <div class="slide">Slide 1</div>
+          <div class="slide">Slide 2</div>
+          <div class="slide">Slide 3</div>
+        </div>
+        <button class="prev">Previous</button>
+        <button class="next">Next</button>
+      </div>
+      
+      <script>
+        const slides = document.querySelector('.slides');
+const slideWidth = document.querySelector('.slide').clientWidth;
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+let currentIndex = 0;
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.children.length) % slides.children.length;
+  updateSlider();
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.children.length;
+  updateSlider();
+});
+
+function updateSlider() {
+  slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+      </script>
+</body>
+</html>

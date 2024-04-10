@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jq Basic || Advance</title>
+</head>
+
+<body>
+    <h1 align="center"><u>Module (JQUERY BASIC & ADVANCE)</u></h1>
+        <ol>
+
+        <li> <h3>What is jQuery?</h3></li>
+        &#10148;jQuery is a fast, small, cross-platform and feature-rich JavaScript library. It is designed to simplify the client-side scripting of HTML. It makes things like HTML document traversal and manipulation, animation, event handling, and AJAX very simple with an easy-to-use API that works on a lot of different type of browsers. <br>  <br>
+        &#10148;The main purpose of jQuery is to provide an easy way to use JavaScript on your website to make it more interactive and attractive. It is also used to add animation. <br>
+        <ul>
+            <li>jQuery is a small, fast and lightweight JavaScript library.</li>
+            <li>jQuery is platform-independent.</li>
+            <li>jQuery means "write less do more".</li>
+        </ul>
+        <li>  <h3>How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,
+            JQuery Animation?</h3>
+            </li> <br>
+        &#10148; <br>   <b>Applying CSS properties using jQuery</b><br>  <br>
+        <ul>
+        
+                <li>
+                $(document).ready(function() { <br>
+                    $('#elementID').css('property', 'value');<br>
+                });
+                </li> <br>
+              <b> Adding a class to an element using jQuery </b><br>  <br>
+                <li>
+                $(document).ready(function() { <br>
+                    $('#elementID').css('property', 'value');<br>
+                
+                });
+                </li> <br>
+               <b> Removing a class from an element using jQuery </b> <br> <br>
+                <li>
+                $(document).ready(function() { <br>
+                    $('#elementID').removeClass('className');
+                });
+            </li>  <br>
+                <b>jQuery animation</b>    <br> <br>
+$(document).ready(function() { <br>
+    $('#elementID').click(function() { <br>
+        // Animate the element's width and height  
+        <br>
+        $(this).animate({ <br>
+            width: '+=50px',
+            height: '+=50px'
+        }, 500); // Duration in milliseconds
+    });
+});
+
+                
+   
+
+</body>
+
+</html>
